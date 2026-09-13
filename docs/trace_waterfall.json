@@ -1,14 +1,6 @@
 [
   {
     "step": 1,
-    "query": "Chào bạn, bạn có thể giới thiệu quy chế học vụ cơ bản của Đại học VinUni không?",
-    "action_type": "FINAL_ANSWER",
-    "thought": "Câu hỏi chung về quy chế học vụ, trả lời trực tiếp không cần gọi Tool.",
-    "output": "[Mock Agent Response]: Xin chào! Quy chế học vụ VinUni yêu cầu sinh viên tích lũy tối thiểu 120 tín chỉ và duy trì GPA trên 2.0 để tốt nghiệp.",
-    "latency_ms": 1155.64
-  },
-  {
-    "step": 1,
     "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
     "action_type": "TOOL_EXECUTION",
     "tool_name": "academic_query",
@@ -27,7 +19,7 @@
         "advisor": "PGS.TS Nguyễn Văn A"
       }
     },
-    "latency_ms": 466.69
+    "latency_ms": 0.2
   },
   {
     "step": 2,

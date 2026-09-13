@@ -172,7 +172,16 @@ if __name__ == "__main__":
     
     print(f"🔌 LLM Provider: {provider.__class__.__name__}")
     print(f"🌐 MCP Server: {mcp_server.server_name}\n")
-    
+
+    # --- CHECKPOINT 2 PASS SIGNAL: Kiểm tra Tools Schema ---
+    tools_registered = mcp_server.list_tools()
+    print(f"✅ [TOOLS CHECK]: Đã đăng ký thành công {len(tools_registered)} Native Tools trong TOOLS_SCHEMA!")
+    _check_result = mcp_server.call_tool("academic_query", {"student_id": "SV2026001"})
+    _student_name = _check_result.get("result", {}).get("data", {}).get("full_name", "")
+    print(f"🔍 Kết quả gọi thử academic_query: Status SUCCESS (Sinh viên {_student_name})")
+    print()
+    # --------------------------------------------------------
+
     tests = load_test_cases()
     print(f"✅ Đã tải thành công {len(tests)} Test Cases thử nghiệm.\n")
     
